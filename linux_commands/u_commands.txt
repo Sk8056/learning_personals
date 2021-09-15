@@ -1,5 +1,19 @@
 whatis "command name"  = displays the short description of the provided command
 
+who = display basic info about user
+
+whoami = displays the name of the currentlt loggedin user.
+
+hostname = displays the hostname
+
+lscpu = displays details of cpu system.
+
+lsb_release -a = display info about linux distribution
+
+uname -a = display info about user
+
+id = display basic info about currently logged in user.
+
 man "command name" = display all possible arguments with the command - kind of doc for commands 
 
 ls = list names of files and directory
@@ -75,8 +89,12 @@ cat cl.txt | grep "pattern to search" = this is called piping(redirecting the re
 
 the symbol > will put the content into the file, It is not like pipe.
 
+--------------------------------------------------------
+locate -all "file_name"  = used to find the file by name. it searches the provided file name in the system.
 
+locate -i "file_name" = removes the case-sensitive check
   
-  
-  
-  
+---------------------------------------------------------
+find "directory_name" -type f or d -name "file_name" = search the file in the provided directory, also use -iname to remove case check.
+
+find . -type f -perm 744 = display all the files having 744 level permission 

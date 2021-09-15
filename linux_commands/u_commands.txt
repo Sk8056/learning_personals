@@ -124,4 +124,7 @@ du -shc * = shows total space of directory
 
 df -h =  shows the installed drive sized with used and available space
 df -ht ext4 = shows the details of only internal drive not all drive like external
+---------------------------------------------------------
+tar -cvf "name_of_output_tar_file" "name_of_dir_to_compress" = compress
+tar -xvf "name_of_tar_file" "place_to_extract" = decompress or extract
  

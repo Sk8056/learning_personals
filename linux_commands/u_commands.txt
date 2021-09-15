@@ -82,6 +82,7 @@ chgrp = to change the group ownership - confusion
 chgrp root test.sh 
 
 ---------------------------------------------------
+
 grep - use to find the particular content in the file
 grep "pattern or string to search" "filename"
 
@@ -90,11 +91,37 @@ cat cl.txt | grep "pattern to search" = this is called piping(redirecting the re
 the symbol > will put the content into the file, It is not like pipe.
 
 --------------------------------------------------------
+
 locate -all "file_name"  = used to find the file by name. it searches the provided file name in the system.
 
 locate -i "file_name" = removes the case-sensitive check
   
 ---------------------------------------------------------
+
 find "directory_name" -type f or d -name "file_name" = search the file in the provided directory, also use -iname to remove case check.
 
-find . -type f -perm 744 = display all the files having 744 level permission 
+find . -type f -perm 744 = display all the files having 744 level permission
+
+---------------------------------------------------------
+
+there are many shells in the ubunutu the default on is bash
+cat /etc/shells = displays all the supported shells
+chsh = to change the shells
+cat /etc/passwd | grep "usern_name" = to check active shell or echo $SHELL can be used.
+
+.bashrc is the bash configuration file - hidden files starts with .
+.bash_history file cahche all the commands used by the user on the terminal
+
+cat .bash_history = to view all the used commands
+cat /dev/null > ~/.bash_history = to clear all the commands from the .bash_history file
+
+create .bash_aliases file to create shortcut for the commands like:
+alias update='sudo apt-get update'
+-------------------------------------------------------------
+du = shows the size of file in the disk
+du -sh * = shows the disk size in human readable form
+du -shc * = shows total space of directory 
+
+df -h =  shows the installed drive sized with used and available space
+df -ht ext4 = shows the details of only internal drive not all drive like external
+ 

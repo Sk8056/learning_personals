@@ -1,0 +1,82 @@
+whatis "command name"  = displays the short description of the provided command
+
+man "command name" = display all possible arguments with the command - kind of doc for commands 
+
+ls = list names of files and directory
+ls -l = list names of files and directory with more details
+ls -a = list all the files including the hidden one's, hidden files starts with fullstop .
+ls -al = list all the files including the hidden one's with more details.
+
+pwd = displays the current working directories
+
+cd = returns to the /home/username directory
+cd "directory_name" = change the current directory to the provided directory
+cd .. = move one directory back
+
+rm "file name" = removes the provided file name from the directory
+rm -R "directory name" it removes the entire directory with files in it. R means recursive
+
+mkdir = creates a new directory
+
+cp "file or directory name" "destination" copies and paste
+
+mv = renames the files or directory as well as move them
+
+-----------------------------------------------------------------------------------------------------------
+Permission in linux is easy:
+There are two ways:
+1. Symbolic mode
+2. Binary or octal mode
+
+There are three major permission:
+read-r, write-w, execute-x.
+
+chmod = changes the permission of the file like give execute permission 
+chmod u=rwx "filename" = symbolic mode example
+u = means owner or current user permission
+g = group
+o = other users
+
+drw-r--r--
+d means this is the directiry
+rw- means the owner's permission
+r-- group permission
+r-- other user's permission
+
+chmod go-wx test.sh = removes the write and execute permission to the group and all other members
+chmod u-x test.sh
+
+binary mode
+r - 4
+w - 2
+x - 1
+
+chmod 744 "test.sh" means user has full permission, group and other users has only the read permission
+chmod 765 "test.sh" means user has full permission, group has read, write and user has read, execute permission.
+
+Directory permissions
+chmod ugo=rwx learning/
+chmod 644 learning/
+chmod -R 777 learning/ = gives full permission to all files present in the learning dir using -R
+
+To change the ownership for the file and directory
+chown root "file name"
+
+To change the grop ownership
+groups "username" = list all the group the user belongs to
+chgrp = to change the group ownership - confusion
+chgrp root test.sh 
+
+---------------------------------------------------
+grep - use to find the particular content in the file
+grep "pattern or string to search" "filename"
+
+cat cl.txt | grep "pattern to search" = this is called piping(redirecting the result to other commands)
+
+the symbol > will put the content into the file, It is not like pipe.
+
+
+  
+  
+  
+  
